@@ -8,14 +8,14 @@ public class simbo_stack {
 	
 	
     public void push(int x) {
-        if(maxStack.isEmpty() || x >= maxStack.pop()) {
+        if(maxStack.isEmpty() || x >= maxStack.peek()) {
         	maxStack.push(x);
         }
     	stack.push(x);
     }
     
     public void pop() {
-        if(stack.pop().equals(maxStack.pop())){
+        if(stack.peek().equals(maxStack.peek())){
         	maxStack.pop();
         } 
         stack.pop();
@@ -23,11 +23,11 @@ public class simbo_stack {
     
     
     public int top() {
-        return stack.pop();
+        return stack.peek();
     }
 
     public int getMax() {
-        return maxStack.pop();
+        return maxStack.peek();
     }
     
     
